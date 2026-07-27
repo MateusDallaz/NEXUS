@@ -5,7 +5,7 @@ app = FastAPI();
 @app.get("/usuario")
 def usuario_rota():
     return {
-        "usuario_uuid": "1",
+        "apelido": "1",
         "nome": "Pedro",
         "email": "pedro@example.com",
         "senha_hash": "12345",
@@ -18,11 +18,11 @@ def usuario_rota():
 
 @app.get("/servidor")
 def servidor_rota():
-    return {"servidor_uuid": "1",
+    return {"guilda": "1",
             "nome": "Pedro",
             "descrição": "teste",
             "icone_url": "...",
-            "dono_uuid": "p&dro",
+            "dono": "p&dro",
             "publico": "pedro_gat",
             "criado_em": "2026/06/20"
             }
@@ -30,8 +30,8 @@ def servidor_rota():
 @app.get("/categoria_canal")
 def categoria_canal_rota():
     return {
-        "cateegoria_uuid": "1",
-        "servidor_uuid": "1",
+        "secao": "1",
+        "servidor": "1",
         "nome": "Teste",
         "posicao": "1"
     }
@@ -39,19 +39,14 @@ def categoria_canal_rota():
 @app.get("/membro_servidor")
 def membro_servidor_rota():
     return {
-        "membro_uuid": "1",
-        "usuario_uuid": "1",
-        "servidor_uuid": "1",
-        "cargo_uuid": "1",
+        "cracha": "1",
         "data_entrada": "2026-07-21",
     }
 
 @app.get("/convite")
 def convite_rota():
     return {
-        "convite_uuid": "1",
-        "servidor_uuid": "1",
-        "criado_por_uuid": "1",
+        "passe": "1",
         "codigo": "abcd123",
         "usos_maximos": "50",
         "usos_atuais": "15",
@@ -61,9 +56,9 @@ def convite_rota():
 @app.get("/canal")
 def canal_rota():
     return {
-        "canal_uuid": "1",
-        "servidor_uuid": "1",
-        "categiria_uuid": "1",
+        "sala": "1",
+        "servidor": "1",
+        "categiria": "1",
         "nome": "teste",
         "tipo": "texto",
         "posicao": "1"
@@ -72,9 +67,9 @@ def canal_rota():
 @app.get("/reacao")
 def reacao_rota():
     return {
-        "reacao_uuid": "1",
-        "mensagem_uuid": "1",
-        "usuario_uuid": "1",
+        "eco": "1",
+        "mensagem": "1",
+        "usuario": "1",
         "emoji": "=D",
         "criado_em": "2026-07-21"
     }
@@ -82,7 +77,7 @@ def reacao_rota():
 @app.get("/anexo")
 def anexo_rota():
     return {
-        "mensagem_uuid": "1",
+        "clipe": "1",
         "url_arquivo": "https://claude.ai/chat/e25d5a1d-1c72-4781-8376-deef21e58bb6",
         "tipo_arquivo": "teste",
         "tamanho_bytes": "12375"
@@ -92,29 +87,23 @@ def anexo_rota():
 
 @app.get("/cargo")
 def cargo_rota():
-    return {"cargo_uuid": "1",
-            "servidor_uuid": "1",
+    return {"patente": "1",
             "nome": "Pedro",
             "cor": "verde",
             "permissoes": "adm",
             "posicao": "lider"
     }
     
-@app.get("/Banimento")
+@app.get("/banimento")
 def banimento_rota():
-    return {"banimento_uuid": "01",
-            "servidor_uuid": "1",
-            "usuario_uuid": "Carlos",
-            "banido_por_uuid": "Diego P",
+    return {"veto": "01",
             "motivo": "Racismo",
             "criado_em": "2026/06/01"
     }  
 
 @app.get("/mensagem")
 def menssagem_rota():
-    return {"menssagem_uuid": "Teste",
-            "usuario_uuid": "Marcos W",
-            "canal_uuid": "Chat",
+    return {"carimbo": "Teste",
             "conteudo": "Denúncia",
             "tipo": "online",
             "fixada": "SIM",
