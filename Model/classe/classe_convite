@@ -1,0 +1,7 @@
+class Convite:
+    def __init__(self,passe,codigo, usos_maximos, usos_atuais, expira_em):
+        self.passe = passe
+        self.codigo = codigo
+        self.usos_maximos = usos_maximos
+        self.usos_atuais = usos_atuais
+        self.expira_em = expira_em

@@ -1,0 +1,7 @@
+class Mensagem:
+    def __init__(self,conteudo, tipo, fixcada, criado_em, editado_em):
+        self.conteudo = conteudo
+        self.tipo = tipo
+        self.fixcada = fixcada
+        self.criado_em = criado_em
+        self.editado_em = editado_em
